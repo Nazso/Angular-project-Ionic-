@@ -1,0 +1,7 @@
+{
+  "name": "First demo ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
