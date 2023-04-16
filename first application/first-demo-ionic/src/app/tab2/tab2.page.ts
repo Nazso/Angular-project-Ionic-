@@ -13,4 +13,12 @@ export class Tab2Page {
 
   constructor() {}
 
+  action1() {
+    alert('This is a test!')
+  }
+
+  action2(){
+    alert('This is another test!')
+  }
+
 }
