@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicModule } from '@ionic/angular';
+import { IonicModule, createAnimation } from '@ionic/angular';
 import { ExploreContainerComponent } from '../explore-container/explore-container.component';
 
 @Component({
@@ -10,8 +10,12 @@ import { ExploreContainerComponent } from '../explore-container/explore-containe
   imports: [IonicModule, ExploreContainerComponent],
 })
 export class Tab1Page {
+
+  animationCtrl: any;
   constructor() {}
 
   public alertButtons = ['OK'];
+
+  
 
 }
