@@ -5,13 +5,30 @@
 
 .card {
     // height: 200px;
-    width: 200px;
+    // width: 300px;
+    margin: 10px;
+}
+
+.class__container {
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
     margin: auto;
+}
+
+.card__button {
+    width: 120px;
+    padding: 5px;
+}
+
+.card__button-right {
+    position: absolute;
+    right: 0;
 }
 
 // .square {
 //     width: 100px;
 //     height: 100px;
-//     background: rgba(0, 0, 255, 0.5);
+//     background: rgba(0, 0, 255, 0.5);2
 //     margin: 10px;
 //   }
