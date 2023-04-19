@@ -16,6 +16,12 @@ export class Tab1Page {
 
   public alertButtons = ['OK'];
 
+  testClickLeft() {
+    alert('This is a test click to the left element!')
+  }
   
+  testClickRight() {
+    alert('This is a test click to the right element!')
+  }
 
 }
