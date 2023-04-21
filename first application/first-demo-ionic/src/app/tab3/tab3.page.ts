@@ -10,7 +10,7 @@ import { ExploreContainerComponent } from '../explore-container/explore-containe
   imports: [IonicModule, ExploreContainerComponent],
 })
 export class Tab3Page {
+  
   constructor() {}
-
 
 }
