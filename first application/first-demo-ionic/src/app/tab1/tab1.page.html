@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar  class="header-style">
     <ion-title>
-      Verse 1
+      Ionic application - first verse
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -27,7 +27,7 @@
     <ion-card-content>
       Here's a small text description for the card content. Nothing more, nothing less.
     </ion-card-content>
-    <ion-button class="card__button" id="present-alert-left">
+    <ion-button class="card__button" id="present-alert-left" color="warning">
       <ion-icon slot="start" name="heart"></ion-icon>
       Left
       <ion-alert
@@ -41,7 +41,7 @@
 
 <!-- new button -->
 
-    <ion-button class="card__button card__button-right" id="present-alert-right">
+    <ion-button class="card__button card__button-right" id="present-alert-right" color="success">
       Right
       <ion-icon slot="end" name="heart"></ion-icon>
       <ion-alert
@@ -66,14 +66,14 @@
     <ion-card-content>
       Here's a small text description for the card content. Nothing more, nothing less.
     </ion-card-content>
-    <ion-button class="card__button" (click)="testClickLeft()">
+    <ion-button class="card__button" (click)="testClickLeft()" color="danger">
       <ion-icon slot="start" name="star"></ion-icon>
       Left
     </ion-button>
 
 <!-- new button -->
 
-    <ion-button class="card__button card__button-right" (click)="testClickRight()">
+    <ion-button class="card__button card__button-right" (click)="testClickRight()" color="dark">
       Right
       <ion-icon slot="end" name="star"></ion-icon>
     </ion-button>
