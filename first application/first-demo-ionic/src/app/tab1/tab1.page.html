@@ -16,16 +16,22 @@
   <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content> -->
 
-<div class="class__container">
+<ion-card *NgFor="let cardContent in cardContents">
+  <ion-card-title>{{ cardContent.header }}</ion-card-title>
+  <ion-card-subtitle>{{ cardContent.subHeader }}</ion-card-subtitle>
+  <ion-card-content>{{ cardContent.message }}</ion-card-content>
+</ion-card>
+
+<!-- <div class="class__container">
   <ion-card class="card">
     <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
     <ion-card-header>
-      <ion-card-title>Card Title One</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-    </ion-card-header>
+      <ion-card-title>{{ cardContent.header }}</ion-card-title>
+      <ion-card-subtitle>{{ cardContent.subHeader }}</ion-card-subtitle>
+    </ion-card-header> -->
   
-    <ion-card-content>
-      Here's a small text description for the card content. Nothing more, nothing less.
+    <!-- <ion-card-content>
+      {{ cardContent.message }}
     </ion-card-content>
     <ion-button class="card__button" id="present-alert-left" color="warning">
       <ion-icon slot="start" name="heart"></ion-icon>
@@ -37,26 +43,26 @@
         message="This is an alert on the left side!"
         [buttons]="alertButtons"
       ></ion-alert>
-    </ion-button>
+    </ion-button> -->
 
 <!-- new button -->
 
-    <ion-button class="card__button card__button-right" id="present-alert-right" color="success">
+    <!-- <ion-button class="card__button card__button-right" id="present-alert-right" color="success">
       Right
       <ion-icon slot="end" name="heart"></ion-icon>
       <ion-alert
       trigger="present-alert-right"
-      header="It has been clicked!"
-      subHeader="Important message"
-      message="This is an alert on the right side!"
+      header="{{ cardContent.header }}"
+      subHeader="{{ cardContent.subHeader }}"
+      message="{{ cardContent.message }}"
       [buttons]="alertButtons"
       ></ion-alert>
     </ion-button>
-  </ion-card>
+  </ion-card> -->
   
 <!-- new card -->
 
-  <ion-card class="card">
+  <!-- <ion-card class="card">
     <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
     <ion-card-header>
       <ion-card-title>Card Title Two</ion-card-title>
@@ -69,19 +75,19 @@
     <ion-button class="card__button" (click)="testClickLeft()" color="danger">
       <ion-icon slot="start" name="star"></ion-icon>
       Left
-    </ion-button>
+    </ion-button> -->
 
 <!-- new button -->
 
-    <ion-button class="card__button card__button-right" (click)="testClickRight()" color="dark">
+    <!-- <ion-button class="card__button card__button-right" (click)="testClickRight()" color="dark">
       Right
       <ion-icon slot="end" name="star"></ion-icon>
     </ion-button>
-  </ion-card>
+  </ion-card> -->
   
 <!-- new card -->
 
-  <ion-card class="card">
+  <!-- <ion-card class="card">
     <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
     <ion-card-header>
       <ion-card-title>Card Title Three</ion-card-title>
@@ -94,17 +100,17 @@
     <ion-button class="card__button" (click)="testClickLeft()">
       <ion-icon slot="start" name="mic-outline"></ion-icon>
       Left
-    </ion-button>
+    </ion-button> -->
 
 <!-- new button -->
 
-    <ion-button class="card__button card__button-right" (click)="testClickRight()">
+    <!-- <ion-button class="card__button card__button-right" (click)="testClickRight()">
       Right
       <ion-icon slot="end" name="mic-outline"></ion-icon>
     </ion-button>
-  </ion-card>
+  </ion-card> -->
 
-</div>
+<!-- </div> -->
 
 <ion-button id="present-alert">Click Me</ion-button>
   <ion-alert
