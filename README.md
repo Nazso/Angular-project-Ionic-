@@ -1,6 +1,6 @@
 # Angular-project-Ionic-
 
-I have implemented applications in order to learn ionic toolkit.
+I have implemented this little application in order to learn ionic toolkit.
 
 ## DemoByYT app inside of first application folder
 
