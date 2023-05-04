@@ -11,7 +11,9 @@ export class HomePage {
   constructor(private router:Router) {}
 
   backToLogin() {
-    this.router.navigate(['/login'])
+
+    this.router.navigate(['/login']);
+    
   }
 
 }
