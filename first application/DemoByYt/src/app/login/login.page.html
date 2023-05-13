@@ -16,14 +16,15 @@
   
     <ion-card-content>
       <ion-item>
-        <ion-input label="Username" label-placement="floating" placeholder="Enter yor username"></ion-input>
+        <ion-input [(ngModel)]="user.email" label="Email" label-placement="floating" placeholder="Enter yor email"></ion-input>
       </ion-item>
       <br>
       <ion-item>
-        <ion-input label="Password" label-placement="floating" placeholder="Enter your password" type="password"></ion-input>
+        <ion-input [(ngModel)]="user.password" label="Password" label-placement="floating" placeholder="Enter your password" type="password"></ion-input>
       </ion-item>
       <br>
       <ion-button expand="block" (click)="login()">Login</ion-button>
+      <ion-button expand="block" color="secondary" (click)="register()">Register</ion-button>
     </ion-card-content>
   </ion-card>
 </ion-content>
