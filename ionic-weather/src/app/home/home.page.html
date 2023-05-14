@@ -1,0 +1,81 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      H-design weather app
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="main">
+    <span class="city">Dombóvár</span>
+    <span class="date">Sun, 3:20pm</span>
+
+    <div class="icon">
+      <img src="../../assets/icons8-cloud-50.png" alt="cloudy icon">
+    </div>
+
+    <span class="description">Cloudy</span>
+    <span class="temperatur">18°</span>
+
+  </div>
+
+  <!-- Seven days forecast grid -->
+  <ion-grid>
+    <!-- Day row -->
+    <ion-row>
+      <ion-col class="day">Mon</ion-col>
+      <ion-col class="day">Tue</ion-col>
+      <ion-col class="day">Wed</ion-col>
+      <ion-col class="day">Thu</ion-col>
+      <ion-col class="day">Fri</ion-col>
+      <ion-col class="day">Sat</ion-col>
+      <ion-col class="day">Sun</ion-col>
+    </ion-row>
+
+    <!-- Chance of precipitation -->
+    <ion-row>
+      <ion-col class="precipitation">60 %</ion-col>
+      <ion-col class="precipitation"> - </ion-col>
+      <ion-col class="precipitation"> - </ion-col>
+      <ion-col class="precipitation">20 %</ion-col>
+      <ion-col class="precipitation">60 %</ion-col>
+      <ion-col class="precipitation"> - </ion-col>
+      <ion-col class="precipitation"> - </ion-col>
+    </ion-row>
+
+    <!-- weather icon -->
+    <ion-row>
+      <ion-col class="icon-sm"><img src="../../assets/icons8-cloud-50.png" alt="pic"></ion-col>
+      <ion-col class="icon-sm"><img src="../../assets/icons8-cloud-50.png" alt="pic"></ion-col>
+      <ion-col class="icon-sm"><img src="../../assets/icons8-cloud-50.png" alt="pic"></ion-col>
+      <ion-col class="icon-sm"><img src="../../assets/icons8-cloud-50.png" alt="pic"></ion-col>
+      <ion-col class="icon-sm"><img src="../../assets/icons8-cloud-50.png" alt="pic"></ion-col>
+      <ion-col class="icon-sm"><img src="../../assets/icons8-cloud-50.png" alt="pic"></ion-col>
+      <ion-col class="icon-sm"><img src="../../assets/icons8-cloud-50.png" alt="pic"></ion-col>
+    </ion-row>
+  
+    <!-- Max temperatur -->
+    <ion-row>
+      <ion-col class="hi-sm">25 °C</ion-col>
+      <ion-col class="hi-sm">27 °C</ion-col>
+      <ion-col class="hi-sm">25 °C</ion-col>
+      <ion-col class="hi-sm">28 °C</ion-col>
+      <ion-col class="hi-sm">22 °C</ion-col>
+      <ion-col class="hi-sm">24 °C</ion-col>
+      <ion-col class="hi-sm">26 °C</ion-col>
+    </ion-row>
+
+    <!-- Min temperatur -->
+    <ion-row>
+      <ion-col class="lo-sm">14 °C</ion-col>
+      <ion-col class="lo-sm">13 °C</ion-col>
+      <ion-col class="lo-sm">14 °C</ion-col>
+      <ion-col class="lo-sm">16 °C</ion-col>
+      <ion-col class="lo-sm">15 °C</ion-col>
+      <ion-col class="lo-sm">11 °C</ion-col>
+      <ion-col class="lo-sm">11 °C</ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
