@@ -14,6 +14,10 @@ export class HomePage {
     private wheaterAPI: WeatherService
   ) {}
 
+  ngOnInit() {
+    this.getWeatherData()
+  }
+
   getWeatherData() {
     this.wheaterAPI.getWeatherData().subscribe((resp) => {
       this.res = resp;
