@@ -1,4 +1,4 @@
-$size1: 13em;
+$size1: 11em;
 $size2: 3.5em;
 $size3: 3em;
 $size4: 2em;
@@ -51,8 +51,8 @@ ion-content {
 
 .icon {
   display: block;
-  font-size: $size4;
   padding-top: 0px;
+  margin: auto;
 }
 
 ion-grid {
