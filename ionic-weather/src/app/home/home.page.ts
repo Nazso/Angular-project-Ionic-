@@ -8,21 +8,28 @@ import { WeatherService } from '../services/weather.service';
 })
 export class HomePage {
 
-  private res: any;
-
+  public res: any;
+  public date = '';
+  public description = [];
+  
   constructor(
     private wheaterAPI: WeatherService
-  ) {}
-
-  ngOnInit() {
-    this.getWeatherData()
-  }
-
-  getWeatherData() {
-    this.wheaterAPI.getWeatherData().subscribe((resp) => {
-      this.res = resp;
-      console.log(this.res)
-    })
-  }
+    ) {}
+    
+    ngOnInit() {
+      this.getWeatherData()
+      this.date = new Date().toDateString();
+      console.log(this.date);
+    }
+    
+    getWeatherData() {
+      this.wheaterAPI.getWeatherData().subscribe((resp) => {
+        this.res = resp;
+        // this.description = this.res.daily.weathercode
+        console.log(this.res)
+        // console.log(this.description)
+      })
+    }
+    
 
 }
