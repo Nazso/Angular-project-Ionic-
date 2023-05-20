@@ -8,15 +8,17 @@
 
 <ion-content [fullscreen]="true">
   <div class="main">
-    <span class="city">Dombóvár</span>
-    <span class="date">Sun, 3:20pm</span>
+    <span class="city">{{ res.location.name }}</span>
+    <!-- <span class="date">{{ res.daily.time[0] | date: 'fullDate' }}</span> -->
+    <span class="date">{{ res.current.last_updated | date: 'fullDate' }}</span>
 
-    <div class="icon">
-      <img src="../../assets/icons8-cloud-50.png" alt="cloudy icon">
+    <div>
+      <img class="icon" src= "{{ res.current.condition.icon }}" alt="weather icon">
     </div>
 
-    <span class="description">Cloudy</span>
-    <span class="temperatur">18°</span>
+    <span class="description">{{ res.current.condition.text }}</span>
+    <!-- <span class="temperatur">{{ res.daily.temperature_2m_max[0] | number: '1.0-0' }}°</span> -->
+    <span class="temperatur">{{ res.current.temp_c }}°</span>
 
   </div>
 
@@ -24,57 +26,56 @@
   <ion-grid>
     <!-- Day row -->
     <ion-row>
-      <ion-col class="day">Mon</ion-col>
-      <ion-col class="day">Tue</ion-col>
-      <ion-col class="day">Wed</ion-col>
-      <ion-col class="day">Thu</ion-col>
-      <ion-col class="day">Fri</ion-col>
-      <ion-col class="day">Sat</ion-col>
-      <ion-col class="day">Sun</ion-col>
+      <ion-col class="day">{{ res.forecast.forecastday[1].date | date:'mediumDate' }}</ion-col>
+      <ion-col class="day">{{ res.forecast.forecastday[2].date | date:'mediumDate' }}</ion-col>
+      <ion-col class="day">{{ res.forecast.forecastday[3].date | date:'mediumDate' }}</ion-col>
+      <ion-col class="day">{{ res.forecast.forecastday[4].date | date:'mediumDate' }}</ion-col>
+      <ion-col class="day">{{ res.forecast.forecastday[5].date | date:'mediumDate' }}</ion-col>
+      <ion-col class="day">{{ res.forecast.forecastday[6].date | date:'mediumDate' }}</ion-col>
+      <ion-col class="day">{{ res.forecast.forecastday[7].date | date:'mediumDate' }}</ion-col>
     </ion-row>
 
     <!-- Chance of precipitation -->
     <ion-row>
-      <ion-col class="precipitation">60 %</ion-col>
-      <ion-col class="precipitation"> - </ion-col>
-      <ion-col class="precipitation"> - </ion-col>
-      <ion-col class="precipitation">20 %</ion-col>
-      <ion-col class="precipitation">60 %</ion-col>
-      <ion-col class="precipitation"> - </ion-col>
-      <ion-col class="precipitation"> - </ion-col>
+      <ion-col class="precipitation">{{ res.forecast.forecastday[1].day.daily_chance_of_rain }} %</ion-col>
+      <ion-col class="precipitation">{{ res.forecast.forecastday[2].day.daily_chance_of_rain }} %</ion-col>
+      <ion-col class="precipitation">{{ res.forecast.forecastday[3].day.daily_chance_of_rain }} %</ion-col>
+      <ion-col class="precipitation">{{ res.forecast.forecastday[4].day.daily_chance_of_rain }} %</ion-col>
+      <ion-col class="precipitation">{{ res.forecast.forecastday[5].day.daily_chance_of_rain }} %</ion-col>
+      <ion-col class="precipitation">{{ res.forecast.forecastday[6].day.daily_chance_of_rain }} %</ion-col>
+      <ion-col class="precipitation">{{ res.forecast.forecastday[7].day.daily_chance_of_rain }} %</ion-col>
     </ion-row>
 
     <!-- weather icon -->
     <ion-row>
-      <ion-col class="icon-sm"><img src="../../assets/icons8-cloud-50.png" alt="pic"></ion-col>
-      <ion-col class="icon-sm"><img src="../../assets/icons8-cloud-50.png" alt="pic"></ion-col>
-      <ion-col class="icon-sm"><img src="../../assets/icons8-cloud-50.png" alt="pic"></ion-col>
-      <ion-col class="icon-sm"><img src="../../assets/icons8-cloud-50.png" alt="pic"></ion-col>
-      <ion-col class="icon-sm"><img src="../../assets/icons8-cloud-50.png" alt="pic"></ion-col>
-      <ion-col class="icon-sm"><img src="../../assets/icons8-cloud-50.png" alt="pic"></ion-col>
-      <ion-col class="icon-sm"><img src="../../assets/icons8-cloud-50.png" alt="pic"></ion-col>
+      <ion-col class="icon-sm"><img src="{{ res.forecast.forecastday[1].day.condition.icon }}" alt="pic"></ion-col>
+      <ion-col class="icon-sm"><img src="{{ res.forecast.forecastday[2].day.condition.icon }}" alt="pic"></ion-col>
+      <ion-col class="icon-sm"><img src="{{ res.forecast.forecastday[3].day.condition.icon }}" alt="pic"></ion-col>
+      <ion-col class="icon-sm"><img src="{{ res.forecast.forecastday[4].day.condition.icon }}" alt="pic"></ion-col>
+      <ion-col class="icon-sm"><img src="{{ res.forecast.forecastday[5].day.condition.icon }}" alt="pic"></ion-col>
+      <ion-col class="icon-sm"><img src="{{ res.forecast.forecastday[6].day.condition.icon }}" alt="pic"></ion-col>
+      <ion-col class="icon-sm"><img src="{{ res.forecast.forecastday[7].day.condition.icon }}" alt="pic"></ion-col>
     </ion-row>
   
     <!-- Max temperatur -->
     <ion-row>
-      <ion-col class="hi-sm">25 °C</ion-col>
-      <ion-col class="hi-sm">27 °C</ion-col>
-      <ion-col class="hi-sm">25 °C</ion-col>
-      <ion-col class="hi-sm">28 °C</ion-col>
-      <ion-col class="hi-sm">22 °C</ion-col>
-      <ion-col class="hi-sm">24 °C</ion-col>
-      <ion-col class="hi-sm">26 °C</ion-col>
+      <ion-col class="hi-sm">{{ res.forecast.forecastday[1].day.maxtemp_c | number:'1.0-0' }} °C</ion-col>
+      <ion-col class="hi-sm">{{ res.forecast.forecastday[2].day.maxtemp_c | number:'1.0-0' }} °C</ion-col>
+      <ion-col class="hi-sm">{{ res.forecast.forecastday[3].day.maxtemp_c | number:'1.0-0' }} °C</ion-col>
+      <ion-col class="hi-sm">{{ res.forecast.forecastday[4].day.maxtemp_c | number:'1.0-0' }} °C</ion-col>
+      <ion-col class="hi-sm">{{ res.forecast.forecastday[5].day.maxtemp_c | number:'1.0-0' }} °C</ion-col>
+      <ion-col class="hi-sm">{{ res.forecast.forecastday[6].day.maxtemp_c | number:'1.0-0' }} °C</ion-col>
+      <ion-col class="hi-sm">{{ res.forecast.forecastday[7].day.maxtemp_c | number:'1.0-0' }} °C</ion-col>
     </ion-row>
 
     <!-- Min temperatur -->
     <ion-row>
-      <ion-col class="lo-sm">14 °C</ion-col>
-      <ion-col class="lo-sm">13 °C</ion-col>
-      <ion-col class="lo-sm">14 °C</ion-col>
-      <ion-col class="lo-sm">16 °C</ion-col>
-      <ion-col class="lo-sm">15 °C</ion-col>
-      <ion-col class="lo-sm">11 °C</ion-col>
-      <ion-col class="lo-sm">11 °C</ion-col>
+      <ion-col class="lo-sm">{{ res.forecast.forecastday[1].day.mintemp_c | number:'1.0-0' }} °C</ion-col>
+      <ion-col class="lo-sm">{{ res.forecast.forecastday[2].day.mintemp_c | number:'1.0-0' }} °C</ion-col>
+      <ion-col class="lo-sm">{{ res.forecast.forecastday[3].day.mintemp_c | number:'1.0-0' }} °C</ion-col>
+      <ion-col class="lo-sm">{{ res.forecast.forecastday[4].day.mintemp_c | number:'1.0-0' }} °C</ion-col>
+      <ion-col class="lo-sm">{{ res.forecast.forecastday[5].day.mintemp_c | number:'1.0-0' }} °C</ion-col>
+      <ion-col class="lo-sm">{{ res.forecast.forecastday[7].day.mintemp_c | number:'1.0-0' }} °C</ion-col>
     </ion-row>
   </ion-grid>
 
