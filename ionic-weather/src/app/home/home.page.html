@@ -8,15 +8,18 @@
 
 <ion-content [fullscreen]="true">
   <div class="main">
-    <form>
-      <select name="place" id="place">
-        <option value="budapest">Budapest</option>
-        <option value="berlin">Berlin</option>
-        <option value="madrid">Madrid</option>
-        <option value="athén">Athén</option>
+    <form [formGroup]="placeOfWeather" (ngSubmit)="onSubmit()">
+      <label for="place">Choose the city!</label>
+      <!-- <input type="text" name="place" formControlName="place"> -->
+      <select name="place" id="place" formControlName="place">
+        <option value="Budapest">Budapest</option>
+        <option value="Berlin" selected>Berlin</option>
+        <option value="Madrid">Madrid</option>
+        <option value="Athén">Athén</option>
       </select>
+      <button type="submit">Send</button>
     </form>
-    <span>{{ placeOfWeather }}</span>
+    <span>{{ place }}</span>
     <!-- <span class="city">{{ res.location.name }}</span> -->
     <!-- <span class="date">{{ res.daily.time[0] | date: 'fullDate' }}</span> -->
     <span class="date">{{ res.current.last_updated | date: 'fullDate' }}</span>
