@@ -9,6 +9,17 @@ ion-content {
   --ion-font-family: 'Roboto', sans-serif;
 }
 
+#place {
+  margin: 10px auto;
+  width: 200px;
+  height: 40px;
+  background-color: #cea10d;
+  // color: aliceblue;
+  text-align: center;
+  font-weight: bolder;
+  font-size: larger;
+}
+
 ion-header {
   --ion-text-color: #e67e7e;
 }
@@ -81,4 +92,13 @@ ion-grid {
 
 .lo-sm {
   display: block;
+}
+
+select {
+  display: block;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
 }
