@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, NgForm } from '@angular/forms';
 import { WeatherService } from '../services/weather.service';
 
 @Component({
@@ -9,27 +9,42 @@ import { WeatherService } from '../services/weather.service';
 })
 export class HomePage {
 
-  placeOfWeather = 'Budapest'
+  // placeOfWeather = 'Athen'
 
-  // placeOfWeather = new FormGroup({
-  //   place: new FormControl('')
-  // });
+  // placeOfWeather = this.fb.group({
+  //   place: '',
+  // })
+
+  // placeOfWeather: any = new FormControl('');
+
+  placeOfWeather: FormGroup = new FormGroup({
+    place : new FormControl('')
+  });
 
   public res: any;
   public date = '';
   public description = [];
+  public place = '';
   
   constructor(
     private wheaterAPI: WeatherService,
     private fb: FormBuilder
     ) {
-      this.wheaterAPI.placeOfWeather = this.placeOfWeather
+      this.wheaterAPI.placeOfWeather = this.place
     }
     
     ngOnInit() {
       this.getWeatherData()
       this.date = new Date().toDateString();
       console.log(this.date);
+
+      // this.onSubmit()
+
+    }
+
+    onSubmit() {
+      this.place = this.placeOfWeather.value.place;
+      console.log(this.place)
     }
     
     getWeatherData() {
