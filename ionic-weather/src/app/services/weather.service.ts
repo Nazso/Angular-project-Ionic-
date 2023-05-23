@@ -32,8 +32,8 @@ export class WeatherService {
     // let queryString = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=${cnt}&appid=${apiId}`;
     // let queryString = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max&daily=temperature_2m_min&daily=weathercode&timezone=auto`;
 
-    // let queryString = `http://api.weatherapi.com/v1/forecast.json?key=${apiIdNext}&q=Budapest&days=8&aqi=no&alerts=no`;
-    let queryString = `http://api.weatherapi.com/v1/forecast.json?key=ffa1225d38f04fd9953214103232005&q=${this.placeOfWeather}&days=8&aqi=no&alerts=no`;
+    let queryString = `http://api.weatherapi.com/v1/forecast.json?key=${apiIdNext}&q=Budapest&days=8&aqi=no&alerts=no`;
+    // let queryString = `http://api.weatherapi.com/v1/forecast.json?key=ffa1225d38f04fd9953214103232005&q=${this.placeOfWeather}&days=8&aqi=no&alerts=no`;
     
 
     return this.http.get(queryString)
