@@ -8,10 +8,10 @@
 
 <ion-content [fullscreen]="true">
   <div class="main">
-    <form [formGroup]="placeOfWeather" (ngSubmit)="onSubmit()">
-      <label for="place">Choose the city!</label>
+    <!-- <form [formGroup]="placeOfWeather" (ngSubmit)="onSubmit()">
+      <label for="place">Choose the city!</label> -->
       <!-- <input type="text" name="place" formControlName="place"> -->
-      <select name="place" id="place" formControlName="place">
+      <!-- <select name="place" id="place" formControlName="place">
         <option value="Budapest">Budapest</option>
         <option value="Berlin" selected>Berlin</option>
         <option value="Madrid">Madrid</option>
@@ -19,9 +19,9 @@
       </select>
       <button type="submit">Send</button>
     </form>
-    <span>{{ place }}</span>
-    <!-- <span class="city">{{ res.location.name }}</span> -->
-    <!-- <span class="date">{{ res.daily.time[0] | date: 'fullDate' }}</span> -->
+    <span>{{ place }}</span> -->
+    <span class="city">{{ res.location.name }}</span>
+    <!-- <span class="date">{{ res.daily.time[0] | date: 'fullDsate' }}</span> -->
     <span class="date">{{ res.current.last_updated | date: 'fullDate' }}</span>
 
     <div>
