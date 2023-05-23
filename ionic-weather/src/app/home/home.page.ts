@@ -17,20 +17,20 @@ export class HomePage {
 
   // placeOfWeather: any = new FormControl('');
 
-  placeOfWeather: FormGroup = new FormGroup({
-    place : new FormControl('')
-  });
+  // placeOfWeather: FormGroup = new FormGroup({
+  //   place : new FormControl('')
+  // });
 
   public res: any;
   public date = '';
   public description = [];
-  public place = '';
+  // public place = '';
   
   constructor(
     private wheaterAPI: WeatherService,
     private fb: FormBuilder
     ) {
-      this.wheaterAPI.placeOfWeather = this.place
+      // this.wheaterAPI.placeOfWeather = this.place
     }
     
     ngOnInit() {
@@ -42,10 +42,10 @@ export class HomePage {
 
     }
 
-    onSubmit() {
-      this.place = this.placeOfWeather.value.place;
-      console.log(this.place)
-    }
+    // onSubmit() {
+    //   this.place = this.placeOfWeather.value.place;
+    //   console.log(this.place)
+    // }
     
     getWeatherData() {
       this.wheaterAPI.getWeatherData().subscribe((resp) => {
