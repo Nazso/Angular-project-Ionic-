@@ -9,10 +9,14 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { DayPipe } from './pipes/day.pipe';
+import { DateFormattingPipe } from './pipes/date-formatting.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DayPipe,
+    DateFormattingPipe
   ],
   imports: [
     BrowserModule,
