@@ -38,13 +38,13 @@
   <ion-grid>
     <!-- Day row -->
     <ion-row>
-      <ion-col class="day">{{ res.forecast.forecastday[1].date_epoch }}</ion-col>
-      <ion-col class="day">{{ res.forecast.forecastday[2].date_epoch }}</ion-col>
-      <ion-col class="day">{{ res.forecast.forecastday[3].date_epoch }}</ion-col>
-      <ion-col class="day">{{ res.forecast.forecastday[4].date_epoch }}</ion-col>
-      <ion-col class="day">{{ res.forecast.forecastday[5].date_epoch }}</ion-col>
-      <ion-col class="day">{{ res.forecast.forecastday[6].date_epoch }}</ion-col>
-      <ion-col class="day">{{ res.forecast.forecastday[7].date_epoch }}</ion-col>
+      <ion-col class="day">{{ res.forecast.forecastday[1].date_epoch | day }}</ion-col>
+      <ion-col class="day">{{ res.forecast.forecastday[2].date_epoch | day }}</ion-col>
+      <ion-col class="day">{{ res.forecast.forecastday[3].date_epoch | day }}</ion-col>
+      <ion-col class="day">{{ res.forecast.forecastday[4].date_epoch | day }}</ion-col>
+      <ion-col class="day">{{ res.forecast.forecastday[5].date_epoch | day }}</ion-col>
+      <ion-col class="day">{{ res.forecast.forecastday[6].date_epoch | day }}</ion-col>
+      <ion-col class="day">{{ res.forecast.forecastday[7].date_epoch | day }}</ion-col>
     </ion-row>
 
     <!-- Chance of precipitation -->
