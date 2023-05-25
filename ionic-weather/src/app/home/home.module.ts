@@ -7,6 +7,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { HomePageRoutingModule } from './home-routing.module';
 
+import { DayPipe } from '../pipes/day.pipe';
+
 
 @NgModule({
   imports: [
@@ -16,6 +18,14 @@ import { HomePageRoutingModule } from './home-routing.module';
     HomePageRoutingModule,
     ReactiveFormsModule
   ],
-  declarations: [HomePage]
+
+  declarations: [
+    HomePage,
+    DayPipe
+  ],
+
+  exports: [
+    // DayPipe
+  ]
 })
 export class HomePageModule {}
