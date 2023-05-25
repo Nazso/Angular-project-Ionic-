@@ -15,8 +15,6 @@ import { DateFormattingPipe } from './pipes/date-formatting.pipe';
 @NgModule({
   declarations: [
     AppComponent,
-    DayPipe,
-    DateFormattingPipe
   ],
   imports: [
     BrowserModule,
