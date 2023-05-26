@@ -22,7 +22,7 @@
     <span>{{ place }}</span> -->
     <span class="city">{{ res.location.name }}</span>
     <!-- <span class="date">{{ res.daily.time[0] | date: 'fullDsate' }}</span> -->
-    <span class="date">{{ res.current.last_updated | date: 'fullDate' }}</span>
+    <span class="date">{{ res.current.last_updated_epoch | dateFormatting }}</span>
 
     <div>
       <img class="icon" src= "{{ res.current.condition.icon }}" alt="weather icon">
