@@ -56,4 +56,17 @@ export class HomePage {
       })
     }
 
+    doRefresh(event: any) {
+      console.log('Ion-refresh running...');
+
+      this.wheaterAPI.getWeatherData().subscribe((response) => {
+        this.res = response;
+
+        console.log(this.res)
+        console.log('Done reloading weather data.');
+
+        event.target.complete();
+      })
+    }
+
 }
