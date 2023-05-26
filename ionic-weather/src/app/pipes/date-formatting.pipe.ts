@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DateFormattingPipe implements PipeTransform {
 
-  transform(value: string): unknown {
+  transform(value: string[]): unknown {
 
     let val = new Date(+value * 1000);
 
