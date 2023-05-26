@@ -8,6 +8,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HomePageRoutingModule } from './home-routing.module';
 
 import { DayPipe } from '../pipes/day.pipe';
+import { DateFormattingPipe } from '../pipes/date-formatting.pipe';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { DayPipe } from '../pipes/day.pipe';
 
   declarations: [
     HomePage,
-    DayPipe
+    DayPipe,
+    DateFormattingPipe
   ],
 
   exports: [
