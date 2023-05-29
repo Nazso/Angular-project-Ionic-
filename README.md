@@ -11,6 +11,7 @@ Start: \Angular-project-Ionic-\first application\DemoByYt>ionic serve
 Start: \Angular-project-Ionic-\first application\first-demo-ionic>ng serve
 
 ## ionic-weather app
+
 This is a simple application with ionic-Angular, coveres by YT.
 
 Start: \Angular-project-Ionic-\ionic-weather>ionic serve
