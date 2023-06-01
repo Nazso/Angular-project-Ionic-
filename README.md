@@ -15,3 +15,7 @@ Start: \Angular-project-Ionic-\first application\first-demo-ionic>ng serve
 This is a simple application with ionic-Angular, coveres by YT.
 
 Start: \Angular-project-Ionic-\ionic-weather>ionic serve
+
+## filter-search-app
+
+Start: \Angular-project-Ionic-\filter-search-app>ionic serve
