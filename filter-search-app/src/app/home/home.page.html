@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Filter search application - practice
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-searchbar
+    placeholder='Try "Jane"'
+    [(ngModel)]="searchData"
+    animated
+  >
+    
+  </ion-searchbar>
+  
+  <ion-list>
+    <ion-item *ngFor="let employee of employees | filter: searchData">
+      <ion-label>{{ employee.Name }}</ion-label>
+      <ion-label>{{ employee.Position }}</ion-label>
+      <ion-label>{{ employee.Department }}</ion-label>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
