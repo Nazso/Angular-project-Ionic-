@@ -1,0 +1,7 @@
+{
+  "name": "filter-search-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
