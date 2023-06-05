@@ -17,7 +17,7 @@
   </ion-searchbar>
   
   <ion-list>
-    <ion-item *ngFor="let employee of employees | filter: searchData">
+    <ion-item *ngFor="let employee of employees ">
       <ion-label>{{ employee.Name }}</ion-label>
       <ion-label>{{ employee.Position }}</ion-label>
       <ion-label>{{ employee.Department }}</ion-label>
